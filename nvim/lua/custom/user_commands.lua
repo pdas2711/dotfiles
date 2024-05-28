@@ -1,0 +1,9 @@
+-- vim.api.nvim_add_user_command(
+--	'Tw',
+--	function()
+--		vim.api.nvim_command('w')
+--		vim.api.nvim_command('! pdflatex %')
+--	end,
+--	{ nargs = 0 }
+-- )
+-- vim.api.nvim_add_user_command('Test1', function(opts) print(opts.args) end, { nargs = 1 })
