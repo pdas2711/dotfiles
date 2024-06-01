@@ -12,15 +12,18 @@ if [[ $(tty | grep -o "tty") == "tty" ]]; then
 	ttyscheme terminix_dark
 fi
 
-if [[ $([ -f "/run/.toolboxenv" ] && grep -oP "(?<=name=\")[^\";]+" /run/.containerenv) == "" ]]; then
-	loginctl enable-linger
-	tmux has -t main &> /dev/null
-	if [ $? != 0 ] && [[ "$@" == "" ]]; then
-		tmux -2 new-session -s main -D -d
-	fi
-	if [ -z "$TMUX" ]; then
-		if [[ $(tmux ls | grep "main:" | grep -o "(attached)") == "" ]]; then
-			tmux attach -t main
-		fi
+# Tmux Session
+loginctl enable-linger
+tmux has -t main &> /dev/null
+if [ $? != 0 ] && [[ "$@" == "" ]]; then
+	tmux -2 new-session -s main -D -d
+else
+
+fi
+if [ -z "$TMUX" ]; then  # If variable is empty, which happens when not in session
+	if [[ $(tmux ls | grep "main:" | grep -o "(attached)") == "" ]]; then
+		tmux attach -t main
+	else
+		tmux -2 new-session
 	fi
 fi
