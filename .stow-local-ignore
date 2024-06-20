@@ -1,1 +1,5 @@
+.stowrc
+.stow-local-ignore
 .git
+.gitignore
+README.md
