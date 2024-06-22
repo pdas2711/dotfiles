@@ -1,0 +1,9 @@
+# Global upload and download rate in KiB. "0" for unlimited.
+#throttle.global_down.max_rate.set_kb = 0
+throttle.global_up.max_rate.set_kb = 75
+
+# Default directory to save the downloaded torrents.
+directory.default.set = /home/pdas2711/downloads/_torrents/
+
+# Default session directory. When restarting rtorrent, the torrents from this directory will be restarted.
+session.path.set = /home/pdas2711/downloads/_torrents/session/
