@@ -1,5 +1,3 @@
-#alias p='tmux a -t main'
-#alias q='systemd-run --scope --user tmux new-session -s main'
 # alias tmux='HISTFILE=$HISTFILE ~/scripts/tmux.sh'
 #alias cdt='cd "$(tmux send-keys -t main "pwd" ENTER; tmux capture-pane -t main -p -S - | sed "/^$/d" | tail -n 2 | head -n 1)"'
 
@@ -11,10 +9,8 @@ alias r='. ranger'
 alias qtar='~/.local/bin/quicktar.sh'
 alias rm='rm -i'
 alias note='nvim ~/Documents/Notes/$(date +"%Y_%m_%d-%H_%M_%S").md'
-alias cleantex="trash -f *.aux *.log"
-alias scrcpy='export SDL_VIDEODRIVER=x11; scrcpy; unset SDL_VIDEODRIVER'
+alias cleantex="rm -f *.aux *.log"
 alias camera='sudo /home/pdas2711/.local/bin/cam2ip'
-alias pi='ssh -i ~/.ssh/pi 192.168.1.21'
 alias exitt='hyprctl dispatch killactive; tmux kill-session -t main'
 alias rzsh='source ${XDG_CONFIG_HOME}/zsh/.zshrc'
 alias lschmod='stat -c "%a %n"'
