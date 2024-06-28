@@ -17,7 +17,7 @@ export PYTHONPYCACHEPREFIX="$XDG_CACHE_HOME"/python
 export PYTHONUSERBASE="$XDG_DATA_HOME"/python
 export TRASH="$HOME"/.local/share/Trash/files
 export TEXMFHOME="${XDG_CONFIG_HOME}"/texmf
-export PATH="${PATH}:/home/pdas2711/.local/share/python"
+export PATH="${PATH}:${HOME}/.local/bin:${HOME}/.local/share/python"
 export BASE16_TMUX_OPTION_ACTIVE=1
 
 # Other environment variables
