@@ -8,6 +8,7 @@ import re
 clients = json.loads(subprocess.run(["hyprctl -j clients"], capture_output = True, text = True, shell = True).stdout)
 
 if len(argv) == 1:
+    print("Available arguments are: minimize, show, collect")
     exit()
 if argv[1] == "minimize":
     # Get current workspace name
