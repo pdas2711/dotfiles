@@ -18,11 +18,9 @@ if argv[1] == "minimize":
     curr_workspace = workspace_json["name"]
     print(curr_workspace)
     if "special" in window_json["workspace"]["name"]:
-        client_address = window_json["address"]
         cmd = "hyprctl dispatch movetoworkspacesilent " + curr_workspace + ",address:" + client_address
         subprocess.run([cmd], shell = True)
     else:
-        client_address = window_json["address"]
         cmd = "hyprctl dispatch movetoworkspacesilent special:" + curr_workspace + ",address:" + client_address
         subprocess.run([cmd], shell = True)
 elif argv[1] == "show":
