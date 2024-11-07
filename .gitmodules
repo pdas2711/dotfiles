@@ -1,3 +1,6 @@
 [submodule "nvim/.local/share/nvim/site/pack/catppuccin/start/nvim"]
 	path = nvim/.local/share/nvim/site/pack/catppuccin/start/nvim
 	url = https://github.com/catppuccin/nvim
+[submodule "ranger/.config/ranger/plugins/zoxide"]
+	path = ranger/.config/ranger/plugins/zoxide
+	url = https://github.com/ajeetdsouza/zoxide
