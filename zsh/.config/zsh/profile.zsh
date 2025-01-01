@@ -7,9 +7,7 @@ umask 077
 
 # Set font if on a tty
 if [[ $(tty | grep -o "tty") == "tty" ]]; then
-	#setfont /usr/share/kbd/consolefonts/ter-124b.psf.gz
 	setfont -d
-	ttyscheme terminix_dark
 fi
 
 # Tmux Session
