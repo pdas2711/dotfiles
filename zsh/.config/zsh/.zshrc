@@ -22,7 +22,3 @@ for f ($ZDOTDIR/*.zsh) . $f
 
 # Theme
 source "$ZDOTDIR"/catppuccin_mocha-zsh-syntax-highlighting.zsh.config
-
-
-# Syntax highlighting (must be at end of file)
-source /usr/share/zsh/site-functions/zsh-syntax-highlighting.zsh
