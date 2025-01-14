@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/run/current-system/sw/bin/bash
 
 filename=$(date +%Y_%m_%d-%H_%M_%S)
 

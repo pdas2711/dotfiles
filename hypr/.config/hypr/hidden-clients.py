@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/run/current-system/sw/bin/python
 
 import json
 import subprocess

@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/run/current-system/sw/bin/python
 
 from sys import argv
 import subprocess
