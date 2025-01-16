@@ -25,6 +25,6 @@ export BASE16_TMUX_OPTION_ACTIVE=1
 export GPG_TTY=$(tty)
 export EDITOR="nvim"
 export HYPRSHOT_DIR="${HOME}/pictures/screenshots/"
-#export GIT_REMOTE=~git/"repos/user/pdas2711"
+export GIT_REMOTE=~git/"users/pdas2711"
 export PAGER=less LESS='-FR'
 export WORDCHARS=""
