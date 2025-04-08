@@ -22,3 +22,4 @@ alias nft-reload='sudo cp /etc/nftables.conf /var/lib/nftables/rules-save; sudo 
 alias nvimr='nvim -R'
 alias rhypr='touch ~/.config/hypr/hyprland.conf'
 alias hwin='hyprctl clients'
+alias randpw='pwgen -cys 22 | awk "{print $1}"'
