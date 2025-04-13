@@ -20,17 +20,12 @@ function precmd() {
 			elapsed="${elapsed}ms"
 		fi
 		print -rP ""  # Add a new line for readability in the terminal
-		print -rP "%n@%m: ${elapsed}"
+		print -rP "%n@%m (${elapsed}) %2~"
 	else
 		print -rP ""  # Add a new line for readability in the terminal
-		print -rP "%n@%m: ${elapsed}"
+		print -rP "%n@%m (${elapsed}) %2~"
 	fi
 	unset timer
-
-	# this is required for initial prompt and a problem I had with Ctrl+C or
-	# Enter when in normal mode (a new line would come up in insert mode,
-	# but normal mode would be indicated)
-	PROMPT="$VI_MODE \"%2~\" > "
 }
 
 function set-prompt () {
@@ -39,7 +34,7 @@ function set-prompt () {
       (main|viins) VI_MODE="$(insert-mode)" ;;
       (*)          VI_MODE="$(insert-mode)" ;;
     esac
-    PROMPT="$VI_MODE \"%2~\" > "
+    PROMPT="$VI_MODE "
 }
 
 function zle-line-init zle-keymap-select {
