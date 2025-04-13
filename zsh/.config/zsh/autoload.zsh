@@ -7,4 +7,4 @@ echo
 uname -a
 uptime
 
-eval "$(zoxide init zsh)"
+eval "$(zoxide init --cmd cd zsh)"
