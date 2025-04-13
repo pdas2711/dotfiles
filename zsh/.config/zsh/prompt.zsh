@@ -14,7 +14,7 @@ function precmd() {
 		elapsed=$(( ${now} - ${timer} ))
 		elapsed="${elapsed}"
 		if [ ${elapsed} -ge 1000 ]; then
-			elapsed=$(( ${elapsed} * 1.0 /1000 ))
+			elapsed=$(printf "%d\n" $(( ${elapsed} * 1.0 /1000 )))
 			elapsed="${elapsed}s"
 		else
 			elapsed="${elapsed}ms"
