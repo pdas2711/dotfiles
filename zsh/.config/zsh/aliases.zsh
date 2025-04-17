@@ -7,7 +7,7 @@ alias ports='sudo lsof -i -P -n | grep "LISTEN"'
 #alias tmux='~/.local/bin/scripts/s_tmux.sh'
 alias r='ranger --choosedir=$HOME/.rangerdir; LASTDIR=`cat $HOME/.rangerdir`; cd "$LASTDIR"'
 alias qtar='~/.local/bin/quicktar.sh'
-alias rm='rm -i'
+alias rm='trash-put'
 alias note='nvim ~/documents/notes/$(date +"%Y_%m_%d-%H_%M_%S").md'
 alias cleantex="rm -f *.aux *.log"
 alias camera='sudo /home/pdas2711/.local/bin/cam2ip'
