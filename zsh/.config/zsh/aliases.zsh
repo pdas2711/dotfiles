@@ -1,6 +1,7 @@
 # alias tmux='HISTFILE=$HISTFILE ~/scripts/tmux.sh'
 #alias cdt='cd "$(tmux send-keys -t main "pwd" ENTER; tmux capture-pane -t main -p -S - | sed "/^$/d" | tail -n 2 | head -n 1)"'
 
+alias sudo='sudo '
 alias ls='ls --color=auto -h --group-directories'
 alias ll='ls -l'
 alias ports='sudo lsof -i -P -n | grep "LISTEN"'
