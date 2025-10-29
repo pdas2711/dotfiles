@@ -9,7 +9,6 @@ alias ports='sudo lsof -i -P -n | grep "LISTEN"'
 alias r='ranger --choosedir=$HOME/.rangerdir; LASTDIR=`cat $HOME/.rangerdir`; cd "$LASTDIR"'
 alias qtar='~/.local/bin/quicktar.sh'
 alias rm='trash-put'
-alias note='gopass edit -c notes/$(date +"%Y_%m_%d-%H_%M_%S").md'
 alias cleantex="rm -f *.aux *.log"
 alias rzsh='source ${XDG_CONFIG_HOME}/zsh/.zshrc'
 alias lschmod='stat -c "%a %n"'
