@@ -1,4 +1,4 @@
-norun() {
+function norun() {
 	"$@" &> /dev/null &
 }
 
