@@ -11,7 +11,7 @@ if [[ $(tty | grep -o "tty") == "tty" ]]; then
 fi
 
 # Tmux Session
-if [[ ! -z "$(command -v cowsay)" ]]; then
+if [[ ! -z "$(command -v loginctl)" ]]; then
 	loginctl enable-linger
 fi
 tmux has -t main &> /dev/null
