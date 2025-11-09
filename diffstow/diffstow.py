@@ -19,12 +19,12 @@ implementation_path = Path(config["implementation_path"])
 
 # Check for Template directory
 if not template_path.exists():
-    print("Template directory '" + template_path + "' doesn't exist.")
+    print("Template directory '" + str(template_path) + "' doesn't exist.")
     exit()
 
-# Check for implementation directory
+# Check for Implementation directory
 if not implementation_path.exists():
-    print("Implementation directory '" + implementation_path + "' doesn't exist.")
+    print("Implementation directory '" + str(implementation_path) + "' doesn't exist.")
     exit()
 
 # Get name of host from HOST environment variable or from argument
