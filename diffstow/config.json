@@ -1,9 +1,12 @@
 {
-	"template_location": "",
+	"template_path": "",
+	"implementation_path": "",
 	"output_paths": {
 		"template_file": "output_path"
 	},
-	"template_implements": {
-		"template_file": [ "per_host", "implementations" ]
+	"implementations": {
+		"host1": {
+			"template_file": "implementation_file"
+		}
 	}
 }
