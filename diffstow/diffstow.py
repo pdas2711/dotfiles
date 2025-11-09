@@ -44,3 +44,12 @@ if not host in config["implementations"]:
     exit()
 
 template_env = Environment(loader = FileSystemLoader(template_path))
+for template_file, impl_file in list(config["implementations"][host].items()):
+    template_file_path = template_path.joinpath(template_file)
+    impl_file_path = implementation_path.joinpath(impl_file)
+    if not template_file_path.exists():
+        print("Template file '" + template_file + "' doesn't exist.")
+        exit()
+    if not impl_file_path.exists():
+        print("Implementation file '" + impl_file + "' doesn't exist.")
+        exit()
