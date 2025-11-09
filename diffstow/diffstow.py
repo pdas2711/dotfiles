@@ -53,3 +53,11 @@ for template_file, impl_file in list(config["implementations"][host].items()):
     if not impl_file_path.exists():
         print("Implementation file '" + impl_file + "' doesn't exist.")
         exit()
+    template = template_env.get_template(template_file)
+    with open(impl_file_path, "r") as f:
+        implementation = json.load(f)
+    modified_config = template.render(implementation)
+    output_path = Path(config["target"], config["output_paths"][template_file])
+    with open(output_path, "w") as f:
+        f.write(modified_config)
+    print("Written to '" + config["output_paths"][template_file] + "'.")
