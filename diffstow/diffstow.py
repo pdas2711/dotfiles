@@ -14,6 +14,19 @@ else:
     with open("config.json", "r") as f:
         config = json.load(f)
 
+template_path = Path(config["template_path"])
+implementation_path = Path(config["implementation_path"])
+
+# Check for Template directory
+if not template_path.exists():
+    print("Template directory '" + template_path + "' doesn't exist.")
+    exit()
+
+# Check for implementation directory
+if not implementation_path.exists():
+    print("Implementation directory '" + implementation_path + "' doesn't exist.")
+    exit()
+
 # Get name of host from HOST environment variable or from argument
 if len(argv) > 1:
     host = argv[1]
