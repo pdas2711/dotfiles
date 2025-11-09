@@ -58,6 +58,7 @@ for template_file, impl_file in list(config["implementations"][host].items()):
         implementation = json.load(f)
     modified_config = template.render(implementation)
     output_path = Path(config["target"], config["output_paths"][template_file])
+    output_path.parent.mkdir(exist_ok = True, parents = True)  # Generate required directories since git doesn't track empty directories
     with open(output_path, "w") as f:
         f.write(modified_config)
     print("Written to '" + config["output_paths"][template_file] + "'.")
