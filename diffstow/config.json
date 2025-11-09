@@ -1,12 +1,13 @@
 {
-	"template_path": "",
-	"implementation_path": "",
+	"target": "..",
+	"template_path": "templates",
+	"implementation_path": "implementations",
 	"output_paths": {
-		"template_file": "output_path"
+		"git_config": "git/.config/git/config"
 	},
 	"implementations": {
-		"host1": {
-			"template_file": "implementation_file"
+		"xansaware": {
+			"git_config": "xansaware_git_config"
 		}
 	}
 }
