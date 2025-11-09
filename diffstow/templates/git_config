@@ -1,7 +1,6 @@
 [user]
 	name = Pial Das
-	email = pdas2711@proton.me
-	{{ signing }}
+	email = pdas2711@proton.me{{ signing }}
 [init]
 	defaultBranch = main
 [log]
