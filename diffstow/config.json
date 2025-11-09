@@ -8,6 +8,9 @@
 	"implementations": {
 		"xansaware": {
 			"git_config": "xansaware_git_config"
+		},
+		"android": {
+			"git_config": "android_git_config"
 		}
 	}
 }
