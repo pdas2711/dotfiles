@@ -8,6 +8,7 @@ For `config.json`:
 
 ```
 {
+    "target": "",
 	"template_path": "",
 	"implementation_path": "",
 	"output_paths": {
