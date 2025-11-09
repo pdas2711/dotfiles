@@ -1,0 +1,9 @@
+{
+	"template_location": "",
+	"output_paths": {
+		"template_file": "output_path"
+	},
+	"template_implements": {
+		"template_file": [ "per_host", "implementations" ]
+	}
+}
