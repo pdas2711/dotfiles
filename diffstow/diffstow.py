@@ -2,7 +2,7 @@ from sys import argv
 from os import environ
 from socket import gethostname
 from pathlib import Path
-import jinja2
+from jinja2 import Environment, FileSystemLoader
 import json
 
 # Check and load config.json
@@ -42,3 +42,5 @@ else:
 if not host in config["implementations"]:
     print("Host '" + host + "' is not available in config.json.")
     exit()
+
+template_env = Environment(loader = FileSystemLoader(template_path))
