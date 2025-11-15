@@ -3,11 +3,13 @@
 	"template_path": "templates",
 	"implementation_path": "implementations",
 	"output_paths": {
-		"git_config": "git/.config/git/config"
+		"git_config": "git/.config/git/config",
+		"zsh_autoload": "zsh/.config/zsh/autoload.zsh"
 	},
 	"implementations": {
 		"default": {
-			"git_config": "default_git_config"
+			"git_config": "default_git_config",
+			"zsh_autoload": "default_zsh_autoload"
 		}
 	}
 }

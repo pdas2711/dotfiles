@@ -7,8 +7,6 @@ echo
 uname -a
 uptime
 
-if [[ ! -z "$(command -v cowsay)" ]] && [[ ! -z "$(command -v python)" ]]; then
-	$(dirname "$0")/random-select.py | cowsay
-fi
+{{ enable_cowsay }}
 
 eval "$(zoxide init --cmd cd zsh)"
