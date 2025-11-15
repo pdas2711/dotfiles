@@ -1,3 +1,0 @@
-{
-	"signing": "\n\tsigningkey = 65425686F98EB901\n[commit]\n\tgpgsign = true"
-}
