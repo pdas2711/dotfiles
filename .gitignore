@@ -4,3 +4,4 @@
 /diffstow/config.json
 /diffstow/implementations/*
 /git/.config/git/config
+/zsh/.config/zsh/autoload.zsh
