@@ -27,7 +27,7 @@ export GPG_TTY=$(tty)
 export EDITOR="nvim"
 export HYPRSHOT_DIR="${HOME}/media/pictures/screenshots/"
 if [[ ! -z $(getent passwd git) ]]; then
-	export GIT_REMOTE=~git/"users/pdas2711"
+	export GIT_REMOTE=~git/"users/${USER}"
 fi
 export PAGER=less LESS='-FR'
 export WORDCHARS=""
