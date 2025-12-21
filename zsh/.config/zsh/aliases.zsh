@@ -6,7 +6,7 @@ alias sudo='sudo '
 alias ls='ls --color=auto -h --group-directories'
 alias ll='ls -l'
 alias ports='sudo lsof -i -P -n | grep "LISTEN"'
-alias r='ranger --choosedir=$HOME/.rangerdir; LASTDIR=`cat $HOME/.rangerdir`; cd "$LASTDIR"'
+alias rr='ranger --choosedir=$HOME/.rangerdir; LASTDIR=`cat $HOME/.rangerdir`; cd "$LASTDIR"'
 alias qtar='~/.local/bin/quicktar.sh'
 if [[ ! -z "$(command -v trash-cli)" ]]; then
 	alias rm='trash-put'
