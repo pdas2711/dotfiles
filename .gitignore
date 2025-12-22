@@ -1,6 +1,7 @@
 /zsh/.config/zsh/history
 /zsh/.config/zsh/.zcompdump
 /nvim/.local/share/nvim/.netrwhist
+/hypr/.config/hypr/wallpapers/*
 /diffstow/config.json
 /diffstow/implementations/*
 /git/.config/git/config
