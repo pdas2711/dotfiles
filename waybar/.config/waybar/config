@@ -9,7 +9,7 @@
     // Modules configuration
     "custom/sunset": {
     	"format": "",
-	"on-click": "exec ~/.config/hypr/wlsunset.sh"
+	"on-click": "exec $XDG_CONFIG_HOME/hypr/scripts/wlsunset.sh"
 	},
      "hyprland/workspaces": {
          "disable-scroll": true,
