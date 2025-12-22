@@ -37,6 +37,7 @@ if [[ ${2} -gt 0 ]]; then
 	do
 		loop_monitor_args "${1}"
 		sleep ${2}m
+		hyprctl hyprpaper unload all
 	done
 elif [[ ${2} -eq 0 ]]; then
 	loop_monitor_args "${1}"
