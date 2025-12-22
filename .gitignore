@@ -5,3 +5,4 @@
 /diffstow/implementations/*
 /git/.config/git/config
 /zsh/.config/zsh/autoload.zsh
+/hypr/.config/hypr/hyprlock.conf
