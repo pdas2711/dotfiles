@@ -32,6 +32,11 @@ loop_monitor_args() {
 }
 
 WALLPAPER_DIR=${WALLPAPER_DIR:="$XDG_CONFIG_HOME/hypr/wallpapers"}
+
+if [[ -z "${1}" ]] || [[ -z "${2}" ]]; then
+	echo "Must pass at least monitors used and cycle time."
+	exit
+fi
 if [[ ${2} -gt 0 ]]; then
 	while :
 	do
