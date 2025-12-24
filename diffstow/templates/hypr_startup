@@ -1,5 +1,5 @@
 # Startup applications on Hyprland startup
 
-exec = pkill hyprpaper; hyprpaper
-exec = $XDG_CONFIG_HOME/hypr/scripts/hyprpaper.sh {{ hyprpaper_params }}  # Params: monitor1=optional_wallpaper,monitor2=optional_wallpaper,... optional_cycle_time
+exec = hyprpaper
+exec = $XDG_CONFIG_HOME/hypr/scripts/hyprpaper.sh {{ hyprpaper_params }}  # Params: monitor1=optional_wallpaper,monitor2=optional_wallpaper,... cycle_time
 exec = pkill waybar; waybar
