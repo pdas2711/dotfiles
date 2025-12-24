@@ -31,12 +31,24 @@ loop_monitor_args() {
 	done
 }
 
+# Terminate this instance if another instance is already running
+if [[ $(pgrep -u $(whoami) -f "hyprpaper.sh" | wc -l) -gt 2 ]]; then
+	echo "Another instance of this wrapper script is already running. Exiting."
+	exit
+fi
+
 WALLPAPER_DIR=${WALLPAPER_DIR:="$XDG_CONFIG_HOME/hypr/wallpapers"}
 
+# Delay for hyprpaper to start
+sleep 3s
+
+# Check Args
 if [[ -z "${1}" ]] || [[ -z "${2}" ]]; then
 	echo "Must pass at least monitors used and cycle time."
 	exit
 fi
+
+# Loop every cycle time unless 0
 if [[ ${2} -gt 0 ]]; then
 	while :
 	do
