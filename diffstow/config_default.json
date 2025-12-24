@@ -9,7 +9,8 @@
 		"hypr_monitors": "hypr/.config/hypr/hyprland/monitors.conf",
 		"hypr_startup": "hypr/.config/hypr/hyprland/startup.conf",
 		"hypr_env_vars": "hypr/.config/hypr/hyprland/env_vars.conf",
-		"hypr_keybinds": "hypr/.config/hypr/hyprland/keybinds.conf"
+		"hypr_keybinds": "hypr/.config/hypr/hyprland/keybinds.conf",
+		"hypr_settings": "hypr/.config/hypr/hyprland/settings.conf"
 	},
 	"implementations": {
 		"default": {
@@ -19,7 +20,8 @@
 			"hypr_monitors": "default_hypr_monitors",
 			"hypr_startup": "default_hypr_startup",
 			"hypr_env_vars": "default_hypr_env_vars",
-			"hypr_keybinds": "default_hypr_keybinds"
+			"hypr_keybinds": "default_hypr_keybinds",
+			"hypr_settings": "default_hypr_settings"
 		}
 	}
 }
