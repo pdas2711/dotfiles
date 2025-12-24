@@ -7,7 +7,8 @@
 		"zsh_autoload": "zsh/.config/zsh/autoload.zsh",
 		"hypr_hyprlock": "hypr/.config/hypr/hyprlock.conf",
 		"hypr_monitors": "hypr/.config/hypr/hyprland/monitors.conf",
-		"hypr_startup": "hypr/.config/hypr/hyprland/startup.conf"
+		"hypr_startup": "hypr/.config/hypr/hyprland/startup.conf",
+		"hypr_env_vars": "hypr/.config/hypr/hyprland/env_vars.conf"
 	},
 	"implementations": {
 		"default": {
@@ -15,7 +16,8 @@
 			"zsh_autoload": "default_zsh_autoload",
 			"hypr_hyprlock": "default_hypr_hyprlock",
 			"hypr_monitors": "default_hypr_monitors",
-			"hypr_startup": "default_hypr_startup"
+			"hypr_startup": "default_hypr_startup",
+			"hypr_env_vars": "default_hypr_env_vars"
 		}
 	}
 }
