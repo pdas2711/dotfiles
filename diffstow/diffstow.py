@@ -1,3 +1,5 @@
+#!./.venv/bin/python
+
 from sys import argv
 from os import environ
 from socket import gethostname
