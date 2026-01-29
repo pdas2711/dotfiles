@@ -90,3 +90,8 @@ group {
 misc {
 	disable_hyprland_logo = true
 }
+
+# Render configuration
+render {
+	cm_auto_hdr = 0  # Disable Auto HDR on Fullscreen
+}
