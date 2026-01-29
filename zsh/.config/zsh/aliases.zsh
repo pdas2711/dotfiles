@@ -14,7 +14,6 @@ fi
 alias cleantex="rm -f *.aux *.log"
 alias rzsh='source ${XDG_CONFIG_HOME}/zsh/.zshrc'
 alias lschmod='stat -c "%a %n"'
-alias pip='~/.local/share/python/bin/pip'
 alias less='less -N --line-num-width=5'
 alias rgpg='source ~/.config/zsh/keys_agent.zsh'
 alias nvimr='nvim -R'
