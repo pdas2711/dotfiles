@@ -15,6 +15,7 @@ function gitf() {
 		filename="${2}"
 		filerepo="$(pwd | sed 's/\//%/g')%${filename}"
 		rm -rf "${XDG_DATA_HOME}/gitf/${filerepo}"
+		echo "Removed '${filerepo}' for file '${filename}'."
 	else
 		filename="${1}"
 		filerepo="$(pwd | sed 's/\//%/g')%${filename}"
