@@ -11,13 +11,19 @@ function note() {
 }
 
 function gitf() {
-	filename="${1}"
-	filerepo="$(pwd | sed 's/\//%/g')%${filename}"
-	if [[ ! -d "${XDG_DATA_HOME}/gitf/${filerepo}" ]]; then
-		mkdir -p "${XDG_DATA_HOME}/gitf/${filerepo}"
-		git init --bare "${XDG_DATA_HOME}/gitf/${filerepo}"
-		echo -e "*\n!${filename}" > "${XDG_DATA_HOME}/gitf/${filerepo}/info/exclude"
+	if [[ "${1}" == "--remove" ]] && [[ ! -z "${2}" ]]; then
+		filename="${2}"
+		filerepo="$(pwd | sed 's/\//%/g')%${filename}"
+		rm -rf "${XDG_DATA_HOME}/gitf/${filerepo}"
+	else
+		filename="${1}"
+		filerepo="$(pwd | sed 's/\//%/g')%${filename}"
+		if [[ ! -d "${XDG_DATA_HOME}/gitf/${filerepo}" ]]; then
+			mkdir -p "${XDG_DATA_HOME}/gitf/${filerepo}"
+			git init --bare "${XDG_DATA_HOME}/gitf/${filerepo}"
+			echo -e "*\n!${filename}" > "${XDG_DATA_HOME}/gitf/${filerepo}/info/exclude"
+		fi
+		shift
+		git --git-dir="${XDG_DATA_HOME}/gitf/${filerepo}" --work-tree=. "$@"
 	fi
-	shift
-	git --git-dir="${XDG_DATA_HOME}/gitf/${filerepo}" --work-tree=. "$@"
 }
