@@ -5,7 +5,8 @@
 	home.stateVersion = "24.11";
 
 	# User Packages
-	home.packages = [
+	home.packages = with pkgs; [
+		nodejs
 	];
 	
 	# Source Dotfiles
