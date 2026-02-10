@@ -9,9 +9,8 @@
 	};
 
 	outputs = { nixpkgs, home-manager, ... }: {
-		homeConfigurations."pdas2711" = home-manager.lib.homeManagerConfiguration {
-			system = "x86_64-linux";
-			pkgs = nixpkgs.legacyPackages.${system};
+		homeConfigurations."pdas2711" = home-manager.lib.homeManagerConfiguration rec {
+			pkgs = nixpkgs.legacyPackages."x86_64-linux";
 			modules = [ ./users/pdas2711/home.nix ];
 		};
 	};
