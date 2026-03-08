@@ -16,7 +16,7 @@ function get_random_wallpaper() {
 
 function set_wallpaper() {
 	hyprctl hyprpaper preload "${WALLPAPER_DIR}/${2}"
-	hyprctl hyprpaper wallpaper "${1},${WALLPAPER_DIR}/${2}"
+	hyprctl hyprpaper wallpaper "${1},contain:${WALLPAPER_DIR}/${2}"
 }
 
 loop_monitor_args() {
