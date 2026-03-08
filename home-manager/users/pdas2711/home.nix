@@ -7,6 +7,7 @@
 	# User Packages
 	home.packages = with pkgs; [
 		nodejs
+		prismlauncher
 	];
 	
 	# Source Dotfiles
