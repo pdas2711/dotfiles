@@ -8,18 +8,9 @@
 # If monitors are not set with a wallpaper, a wallpaper will be chosen randomly with each cycle. However, the '=' must be present.
 
 function get_random_wallpaper() {
-	while true; do
-		wallpaper_list=$(ls ${WALLPAPER_DIR})
-		rnd_index=$(seq 1 $(echo "${wallpaper_list}" | wc -l) | sort -R | head -n 1)
-		wallpaper_select=$(echo "${wallpaper_list}" | sed -n ${rnd_index}p)
-		file_type=$(file "${wallpaper_select}")
-		if [[ ! -z $(echo "${file_type}" | grep -o "^symbolic link") ]]; then
-			file_type=$(file -b "$(readlink -f "${wallpaper_select}")")
-		fi
-		if [[ ! -z $(echo "${file_type}" | grep -o "^JPEG") ]] || [[ ! -z $(echo "${file_type}" | grep -o "^PNG") ]]; then
-			break
-		fi
-	done
+	wallpaper_list=$(ls ${WALLPAPER_DIR})
+	rnd_index=$(seq 1 $(echo "${wallpaper_list}" | wc -l) | sort -R | head -n 1)
+	wallpaper_select=$(echo "${wallpaper_list}" | sed -n ${rnd_index}p)
 	printf "${wallpaper_select}"
 }
 
