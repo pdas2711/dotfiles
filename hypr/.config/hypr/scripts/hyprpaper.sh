@@ -4,7 +4,7 @@
 
 # Args:
 # - monitors - delimited by commas and optionally set with a wallpaper using the '=' character (e.g. DP-1=wallpaper1.png).
-# - cycle-time - how long in minutes the wallpapers will be applied before it gets cycled. If set to 0, cycling will not happen.
+# - cycle-time - how long in seconds the wallpapers will be applied before it gets cycled. If set to 0, cycling will not happen.
 # If monitors are not set with a wallpaper, a wallpaper will be chosen randomly with each cycle. However, the '=' must be present.
 
 function get_random_wallpaper() {
