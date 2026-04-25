@@ -1,4 +1,8 @@
 { config, pkgs, ... }: {
+	imports = [
+		../common/default_applications.nix
+	];
+
 	# User Information and State Version
 	home.username = "pdas2711";
 	home.homeDirectory = "/home/pdas2711";
