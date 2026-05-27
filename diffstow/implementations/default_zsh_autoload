@@ -1,3 +1,0 @@
-{
-	"enable_cowsay": "if [[ ! -z \"$(command -v cowsay)\" ]] && [[ ! -z \"$(command -v python)\" ]]; then\n\t$(dirname \"$0\")/random-select.py | cowsay\nfi"
-}

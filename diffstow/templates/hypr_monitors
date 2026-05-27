@@ -1,4 +1,0 @@
-# Syntax: monitor = selected-display, resolution@refresh-rate, position, scale
-# Default: monitor = , preferred, auto, auto
-
-{{ monitor_list }}
