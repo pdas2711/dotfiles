@@ -2,13 +2,3 @@
 /zsh/.config/zsh/.zcompdump
 /nvim/.local/share/nvim/.netrwhist
 /hypr/.config/hypr/wallpapers/*
-/diffstow/config.json
-/diffstow/implementations/*
-/git/.config/git/config
-/zsh/.config/zsh/autoload.zsh
-/hypr/.config/hypr/hyprlock.conf
-/hypr/.config/hypr/hyprland/monitors.conf
-/hypr/.config/hypr/hyprland/startup.conf
-/hypr/.config/hypr/hyprland/env_vars.conf
-/hypr/.config/hypr/hyprland/keybinds.conf
-/hypr/.config/hypr/hyprland/settings.conf
