@@ -2,14 +2,6 @@ function norun() {
 	"$@" &> /dev/null &
 }
 
-function note() {
-	if [[ -z "${1}" ]]; then
-		gopass edit -c notes/$(date +"%Y_%m_%d-%H_%M_%S").md
-	else
-		gopass edit -c notes/"${1}.md"
-	fi
-}
-
 function gitf() {
 	if [[ "${1}" == "--remove" ]] && [[ ! -z "${2}" ]]; then
 		filename="${2}"
