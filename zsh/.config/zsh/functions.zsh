@@ -1,3 +1,12 @@
+function y() {
+	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")"
+	command yazi "$@" --cwd-file="${tmp}"
+	if cwd="$(command cat -- "${tmp}")" && [ -n "${cwd}" ] && [ "${cwd}" != "${PWD}" ]; then
+		builtin cd -- "${cwd}"
+	fi
+	command rm -f -- "${tmp}"
+}
+
 function norun() {
 	"$@" &> /dev/null &
 }
