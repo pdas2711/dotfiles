@@ -1,3 +1,4 @@
+# Wrapper and alias for yazi
 function y() {
 	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")"
 	command yazi "$@" --cwd-file="${tmp}"
@@ -7,10 +8,12 @@ function y() {
 	command rm -f -- "${tmp}"
 }
 
+# Run applications in background without hogging stdout
 function norun() {
 	"$@" &> /dev/null &
 }
 
+# Git repos for single files
 function gitf() {
 	if [[ "${1}" == "--remove" ]] && [[ ! -z "${2}" ]]; then
 		filename="${2}"
