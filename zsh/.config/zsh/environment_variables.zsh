@@ -4,13 +4,11 @@ if [ -e "$HOME/.nix-profile/etc/profile.d/hm-session-vars.sh" ]; then
 fi
 
 # Basic XDG file paths
-
 export XDG_DATA_HOME=${XDG_DATA_HOME:="$HOME/.local/share"}
 export XDG_CACHE_HOME=${XDG_CACHE_HOME:="$HOME/.cache"}
 export XDG_CONFIG_HOME=${XDG_CONFIG_HOME:="$HOME/.config"}
 
 # Additional application file paths
-
 export CARGO_HOME="${XDG_DATA_HOME}/cargo"
 export GNUPGHOME="${XDG_DATA_HOME}/gnupg"
 export GOPATH="${XDG_DATA_HOME}/go"
@@ -26,7 +24,6 @@ export PATH="${PATH}:${HOME}/.local/bin:${XDG_DATA_HOME}/python"
 export BASE16_TMUX_OPTION_ACTIVE=1
 
 # Other environment variables
-
 export GPG_TTY=$(tty)
 export EDITOR="nvim"
 export HYPRSHOT_DIR="${HOME}/media/pictures/screenshots/"
