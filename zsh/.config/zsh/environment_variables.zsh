@@ -27,3 +27,7 @@ if [[ ! -z $(getent passwd git) ]]; then
 fi
 export PAGER=less LESS='-FR'
 export WORDCHARS=""
+export SDL_VIDEODRIVER="wayland"
+export GTK_THEME="Catppuccin-Mocha-Standard-Lavender-dark:dark"
+export EDITOR=nvim
+export PATH=${PATH}:/var/lib/flatpak/exports/bin
