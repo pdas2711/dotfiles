@@ -14,16 +14,27 @@ fi
 if [[ ! -z "$(command -v loginctl)" ]]; then
 	loginctl enable-linger
 fi
-tmux has -t main &> /dev/null
-if [ $? != 0 ] && [[ "$@" == "" ]]; then
-	tmux -2 new-session -s main -D -d
-else
 
-fi
-if [ -z "$TMUX" ]; then  # If variable is empty, which happens when not in session
-	if [[ $(tmux ls | grep "main:" | grep -o "(attached)") == "" ]]; then
-		tmux attach -t main
+if [[ -z "$TMUX" ]] && (( $+commands[tmux] )); then
+	session_target="main"
+	if tmux has-session -t "${session_target}" 2>/dev/null; then
+		local -a session_info
+		session_info=(${(f)$(tmux list-sessions -F '#{session_name} #{session_attached}' 2>/dev/null)})
+		local is_attached=0
+		for line in ${session_info}; do
+			local name=${${line}:0:${#session_target}}
+			local session_status=${line##* }
+			if [[ "${name}" == "${session_target}" ]]; then
+				is_attached=${session_status}
+				break
+			fi
+		done
+		if [[ "${is_attached}" == "0" ]]; then
+			tmux attach-session -t "${session_target}"
+		else
+			tmux new-session
+		fi
 	else
-		tmux -2 new-session
+		tmux new-session -s "${session_target}"
 	fi
 fi
