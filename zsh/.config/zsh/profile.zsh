@@ -3,6 +3,7 @@ export GTK_THEME="Catppuccin-Mocha-Standard-Lavender-dark:dark"
 export EDITOR=nvim
 export PATH=${PATH}:/var/lib/flatpak/exports/bin
 
+# Umask rw-------
 umask 077
 
 # Set font if on a tty
@@ -10,11 +11,12 @@ if [[ $(tty | grep -o "tty") == "tty" ]]; then
 	setfont -d
 fi
 
-# Tmux Session
+# Login Lingering
 if [[ ! -z "$(command -v loginctl)" ]]; then
 	loginctl enable-linger
 fi
 
+# Dynamic Tmux Main Session
 if [[ -z "$TMUX" ]] && (( $+commands[tmux] )); then
 	session_target="main"
 	if tmux has-session -t "${session_target}" 2>/dev/null; then
