@@ -1,5 +1,6 @@
 { config, pkgs, ... }: {
 	imports = [
+		../common/misc.nix
 		../common/default_applications.nix
 	];
 
