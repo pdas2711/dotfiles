@@ -10,6 +10,44 @@
 				"x-scheme-handler/https" = "brave.desktop";
 			};
 		};
+		desktopEntries = {
+			imv = {
+				name = "IMV";
+				genericName = "Image Viewer";
+				exec = "imv %f";
+				terminal = false;
+				mimeType = [
+					"image/png"
+					"image/jpeg"
+					"image/gif"
+				];
+			};
+			mpv = {
+				name = "MPV";
+				genericName = "Media Player";
+				exec = "mpv %f";
+				terminal = false;
+				mimeType = [
+					"audio/flac"
+					"video/mkv"
+					"video/mp4"
+				];
+			};
+			zathura = {
+				name = "Zathura";
+				genericName = "PDF Document Viewer";
+				exec = "zathura %f";
+				terminal = false;
+				mimeType = [ "application/pdf" ];
+			};
+			brave = {
+				name = "Brave";
+				genericName = "Web Browser";
+				exec = "brave %U";
+				terminal = false;
+				mimeType = [ "text/html" ];
+			};
+		};
 	};
 
 	# Let Home Manager install and manage itself.
