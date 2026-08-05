@@ -2,6 +2,8 @@ vim.g.mapleader = '\\'
 vim.g.maplocalleader = '\\'
 vim.opt.cursorline = true
 vim.wo.number = true
+vim.opt.ignorecase = true
+vim.opt.smartcase = true
 
 local is_tty = vim.fn.system {
 	'tty', '|', 'grep', '-o', '"tty"'
