@@ -26,6 +26,7 @@ if [[ ! -z $(getent passwd git) ]]; then
 	export GIT_REMOTE=~git/"users/${USER}"
 fi
 export PAGER=less LESS='-FR'
+export MANPAGER='nvim +Man!'
 export WORDCHARS=""
 export SDL_VIDEODRIVER="wayland"
 export GTK_THEME="Catppuccin-Mocha-Standard-Lavender-dark:dark"
