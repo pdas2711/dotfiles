@@ -22,3 +22,4 @@ alias randpw='pwgen -cys 22 | awk "{print $1}"'
 alias xotp='gopass otp -o otp/xansaware/pdas2711'
 alias wake='ssh xansawarejb "sudo wake"'
 alias calendar='cal'
+alias hyprlock_restore="hyprctl --instance 0 'keyword misc:allow_session_lock_restore 1'; hyprctl --instance 0 'dispatch exec hyprlock'"
