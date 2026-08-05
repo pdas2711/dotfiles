@@ -1,5 +1,5 @@
 -- Config location
-let config_dir = "configs_lua"
+local config_dir = "configs_lua"
 
 require(config_dir + ".env_vars")  -- Environment variables
 require(config_dir + ".startup")  -- GUI applications on start
