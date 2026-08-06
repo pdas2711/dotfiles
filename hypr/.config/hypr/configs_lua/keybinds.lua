@@ -15,7 +15,8 @@ hl.bind(main_mod .. " + RETURN", hl.dsp.exec_cmd(terminal))  -- Launch terminal
 hl.bind(main_mod .. " + D", hl.dsp.window.close())  -- Close window
 hl.bind(main_mod .. " + SPACE", hl.dsp.window.float({ action = "toggle" }))  -- Toggle between floating and tiling
 hl.bind(main_mod .. " + SLASH", hl.dsp.layout("togglesplit"))  -- Toggle between window splits in Dwindle
-hl.bind(main_mod .. " + C", hl.dsp.exec_cmd("$XDG_CONFIG_HOME/hypr/external/bemenu"))  -- Launch bemenu with specific color profile
+hl.bind(main_mod .. " + C", hl.dsp.exec_cmd("bemenu-run --fb '#1e1e2e' --ff '#cdd6f4' --nb '#1e1e2e' --nf '#cdd6f4' --tb '#1e1e2e' --hb '#1e1e2e' --tf '#f38ba8' --hf '#f9e2af' --af '#cdd6f4' --ab '#1e1e2e'"))  -- Launch bemenu with specific color profile
+
 hl.bind(main_mod .. " + SEMICOLON", hl.dsp.exec_cmd("wpctl set-mute @DEFAULT_AUDIO_SINK@ 1; " .. lockscreen))  -- Mute audio then lock
 
 -- Switch between windows
