@@ -23,7 +23,6 @@ local function set_workspaces()
 	for _, each_monitor in ipairs(monitors) do
 		if monitor_exists(found_monitors, each_monitor) then
 			for i = 1, ws_per_monitor do
-				hl.print(ws_count)
 				if monitor_default then
 					hl.workspace_rule({ workspace = tostring(ws_count), monitor = each_monitor, default = true })
 					monitor_default = false
@@ -44,4 +43,4 @@ local function set_workspaces()
 	end
 end
 
-hl.on("hyprland.start", function() set_workspaces() end)
+hl.on("monitor.added", function() set_workspaces() end)
