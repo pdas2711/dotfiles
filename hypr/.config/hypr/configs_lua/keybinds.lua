@@ -50,8 +50,10 @@ hl.bind(main_mod .. " + SHIFT + L", hl.dsp.window.move({ direction = "right" }))
 hl.bind(main_mod .. " + SHIFT + K", hl.dsp.window.move({ direction = "up" }))
 hl.bind(main_mod .. " + SHIFT + J", hl.dsp.window.move({ direction = "down" }))
 
--- Move windows in a group forwards or backwards
+-- Create groups, cycle between windows, and move windows in a group forwards or backwards
 
+hl.bind(main_mod .. " + W", hl.dsp.group.toggle())  -- Toggle current window into a group
+hl.bind(main_mod .. " + S", hl.dsp.group.next())  -- Cycle through windows in a group
 hl.bind(main_mod .. " + ALT + LEFT", hl.dsp.group.move_window({ forward = false }))  -- Move backwards
 hl.bind(main_mod .. " + ALT + RIGHT", hl.dsp.group.move_window({ forward = true }))  -- Move forwards
 hl.bind(main_mod .. " + ALT + H", hl.dsp.group.move_window({ forward = false }))  -- Move backwards
