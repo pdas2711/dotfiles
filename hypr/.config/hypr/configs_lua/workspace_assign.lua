@@ -21,9 +21,9 @@ local function check_pinned_monitor(pinned_monitor_list, monitor)
 	return false
 end
 
-local function set_workspaces()
-	local pinned_monitors = { "DP-1", "DP-2" }
+local module = {}
 
+function module.set_workspaces(pinned_monitors)
 	local ws_count = 1
 	local found_monitors = hl.get_monitors()
 	local ws_per_monitor = 9 // #found_monitors
@@ -69,4 +69,4 @@ local function set_workspaces()
 	end
 end
 
-hl.on("monitor.added", function() set_workspaces() end)
+return module
