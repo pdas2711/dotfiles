@@ -3,8 +3,8 @@
 
 local module = {}
 
-local current_zoom = hl.get_config("cursor.zoom_factor")
 function module.change_zoom(action)
+	local current_zoom = hl.get_config("cursor.zoom_factor")
 	local new_zoom = nil
 	if action == "increment" then
 		new_zoom = current_zoom + 0.2
