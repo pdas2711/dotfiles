@@ -54,7 +54,7 @@ local function set_workspaces()
 	end
 
 	for _, each_monitor in ipairs(found_monitors) do
-		if not check_pinned_monitor(each_monitor.name) then
+		if not check_pinned_monitor(pinned_monitors, each_monitor.name) then
 			for i = 1, ws_per_monitor do
 				if monitor_default then
 					hl.workspace_rule({ workspace = tostring(ws_count), monitor = each_monitor.name, default = true })
