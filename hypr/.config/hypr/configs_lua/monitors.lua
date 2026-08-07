@@ -32,6 +32,11 @@ hl.monitor({  -- TV
 	scale = 2
 })
 
+hl.monitor({
+	output = "HDMI-A-2",
+	disabled = true
+})
+
 hl.monitor({  -- Generic Rule
 	output = "",
 	mode = "preferred",
