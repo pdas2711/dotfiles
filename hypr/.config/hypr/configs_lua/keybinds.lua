@@ -54,10 +54,22 @@ hl.bind(main_mod .. " + SHIFT + J", hl.dsp.window.move({ direction = "down" }))
 
 hl.bind(main_mod .. " + W", hl.dsp.group.toggle())  -- Toggle current window into a group
 hl.bind(main_mod .. " + S", hl.dsp.group.next())  -- Cycle through windows in a group
-hl.bind(main_mod .. " + ALT + LEFT", hl.dsp.group.move_window({ forward = false }))  -- Move backwards
-hl.bind(main_mod .. " + ALT + RIGHT", hl.dsp.group.move_window({ forward = true }))  -- Move forwards
-hl.bind(main_mod .. " + ALT + H", hl.dsp.group.move_window({ forward = false }))  -- Move backwards
-hl.bind(main_mod .. " + ALT + L", hl.dsp.group.move_window({ forward = true }))  -- Move forwards
+hl.bind(main_mod .. " + SHIFT + ALT + LEFT", hl.dsp.group.move_window({ forward = false }))  -- Move backwards
+hl.bind(main_mod .. " + SHIFT + ALT + RIGHT", hl.dsp.group.move_window({ forward = true }))  -- Move forwards
+hl.bind(main_mod .. " + SHIFT + ALT + H", hl.dsp.group.move_window({ forward = false }))  -- Move backwards
+hl.bind(main_mod .. " + SHIFT + ALT + L", hl.dsp.group.move_window({ forward = true }))  -- Move forwards
+
+-- Move windows into and out of groups
+
+hl.bind(main_mod .. " + ALT + LEFT", hl.dsp.window.move({ into_or_create_group = "left" }))  -- Move into group to the left
+hl.bind(main_mod .. " + ALT + RIGHT", hl.dsp.window.move({ into_or_create_group = "right" }))  -- Move into group to the right
+hl.bind(main_mod .. " + ALT + UP", hl.dsp.window.move({ into_or_create_group = "up" }))  -- Move into group towards up
+hl.bind(main_mod .. " + ALT + DOWN", hl.dsp.window.move({ into_or_create_group = "down" }))  -- Move into group towards down
+hl.bind(main_mod .. " + ALT + H", hl.dsp.window.move({ into_or_create_group = "left" }))  -- Move into group to the left
+hl.bind(main_mod .. " + ALT + L", hl.dsp.window.move({ into_or_create_group = "right" }))  -- Move into group to the right
+hl.bind(main_mod .. " + ALT + K", hl.dsp.window.move({ into_or_create_group = "up" }))  -- Move into group towards up
+hl.bind(main_mod .. " + ALT + J", hl.dsp.window.move({ into_or_create_group = "down" }))  -- Move into group towards down
+hl.bind(main_mod .. " + ALT + S", hl.dsp.window.move({ out_of_group = true }))  -- Move window out of group (directionless)
 
 -- Move/resize windows with LMB/RMB and dragging
 
