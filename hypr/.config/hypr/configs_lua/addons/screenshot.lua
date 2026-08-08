@@ -2,7 +2,7 @@
 
 
 local module = {}
-function module.screenshot(type, destination)
+function module.capture(type, destination)
 	file = os.date("%Y_%m_%d-%H_%M_%S")
 	if type == "window" then
 		hl.dsp.exec_cmd("hyprshot -o " .. destination .. "/ -f ${filename}.png -m window")
