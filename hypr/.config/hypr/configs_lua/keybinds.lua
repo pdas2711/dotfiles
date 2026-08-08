@@ -7,6 +7,7 @@ main_mod = "SUPER"
 
 require(config_dir .. ".audio_controls")
 local zoom = require(config_dir .. ".addons.zoom")
+local screenshot = require(config_dir .. ".addons.screenshot")
 
 -- Some general keybindings
 
@@ -27,6 +28,12 @@ hl.bind(main_mod .. " + TAB", hl.dsp.focus({ last = true }))  -- Switch to last 
 
 hl.bind(main_mod .. " + F", hl.dsp.window.fullscreen({ mode = "maximized", action = "toggle" }))  -- Maximize windows
 hl.bind(main_mod .. " + SHIFT + F", hl.dsp.window.fullscreen({ mode = "fullscreen", action = "toggle" }))  -- True fullscreen windows
+
+-- Screenshotting
+
+hl.bind(main_mod .. " + PRINT", function() screenshot.capture("monitor") end)  -- Entire screen
+hl.bind(main_mod .. " + SHIFT + PRINT", function() screenshot.capture("window") end)  -- Specific window
+hl.bind(main_mod .. " + ALT + PRINT", function() screenshot.capture("region") end)  -- Boxed region
 
 -- Moving focus along windows
 
