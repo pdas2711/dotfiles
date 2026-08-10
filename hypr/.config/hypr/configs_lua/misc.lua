@@ -19,7 +19,3 @@ hl.config({
 		special_scale_factor = 0.92
 	}
 })
-
--- Setting Applications
-terminal = "kitty"
-lockscreen = "hyprlock"

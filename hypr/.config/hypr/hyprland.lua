@@ -16,6 +16,11 @@ require(config_dir .. ".decorations")
 local workspace_assign = require(config_dir .. ".workspace_assign")
 hl.on("monitor.added", function() workspace_assign.set_workspaces({ "DP-1", "DP-2", "HDMI-A-1" }) end)
 
+-- Setting Applications
+
+terminal = "kitty"
+lockscreen = "hyprlock"
+
 debug = {
 	disable_logs = false,
 	enable_stdout_logs = true,
