@@ -1,7 +1,20 @@
----- Config location
+---- Main Configuration
 
+
+-- Configuration Directory
 
 config_dir = "configs_lua"
+
+-- Setting Applications
+
+terminal = "kitty"
+lockscreen = "hyprlock"
+
+-- Home Directory
+
+home = "/home/pdas2711"
+
+-- Import configs
 
 require(config_dir .. ".env_vars")  -- Environment variables
 require(config_dir .. ".misc")
@@ -15,11 +28,6 @@ require(config_dir .. ".decorations")
 
 local workspace_assign = require(config_dir .. ".workspace_assign")
 hl.on("monitor.added", function() workspace_assign.set_workspaces({ "DP-1", "DP-2", "HDMI-A-1" }) end)
-
--- Setting Applications
-
-terminal = "kitty"
-lockscreen = "hyprlock"
 
 debug = {
 	disable_logs = false,
