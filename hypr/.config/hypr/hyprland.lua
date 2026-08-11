@@ -10,9 +10,10 @@ config_dir = "configs_lua"
 terminal = "kitty"
 lockscreen = "hyprlock"
 
--- Home Directory
+-- Directories
 
 home = "/home/pdas2711"
+screenshot_dir = home .. "/media/pictures/screenshots"
 
 -- Import configs
 
