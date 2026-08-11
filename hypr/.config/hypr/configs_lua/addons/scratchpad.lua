@@ -6,6 +6,7 @@ local function move_to_ws(ws_name, client_addr)
 end
 
 local module = {}
+
 function module.global_scratchpad(action)
 	if action == "minimize" then
 		local client = hl.get_active_window()
@@ -13,6 +14,18 @@ function module.global_scratchpad(action)
 			move_to_ws("+0", client.address)
 		else
 			move_to_ws("special", client.address)
+		end
+	end
+end
+
+function module.local_scratchpad(action)
+	if action == "minimize" then
+		local client = hl.get_active_window()
+		if client.workspace.special then
+			move_to_ws("+0", client.address)
+		else
+			ws_num = hl.get_active_workspace()
+			move_to_ws("special:" .. ws_num.id, client.address)
 		end
 	end
 end
