@@ -29,6 +29,8 @@ hl.bind(main_mod .. " + TAB", hl.dsp.focus({ last = true }))  -- Switch to last 
 
 hl.bind(main_mod .. " + 0", hl.dsp.workspace.toggle_special())  -- Show global scratchpad
 hl.bind(main_mod .. " + SHIFT + 0", function() scratchpad.global_scratchpad("minimize") end)  -- Move to and from global
+hl.bind(main_mod .. " + O", hl.dsp.workspace.toggle_special(hl.get_active_workspace().id))  -- Show local scratchpad
+hl.bind(main_mod .. " + SHIFT + O", function() scratchpad.local_scratchpad("minimize") end)  -- Move to and from local
 
 -- Fullscreen toggles
 
