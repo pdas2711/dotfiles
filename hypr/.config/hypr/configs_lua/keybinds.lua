@@ -31,9 +31,9 @@ hl.bind(main_mod .. " + SHIFT + F", hl.dsp.window.fullscreen({ mode = "fullscree
 
 -- Screenshotting
 
-hl.bind(main_mod .. " + PRINT", function() screenshot.capture("monitor") end)  -- Entire screen
-hl.bind(main_mod .. " + SHIFT + PRINT", function() screenshot.capture("window") end)  -- Specific window
-hl.bind(main_mod .. " + ALT + PRINT", function() screenshot.capture("region") end)  -- Boxed region
+hl.bind(main_mod .. " + PRINT", function() screenshot.capture("monitor", screenshot_dir) end)  -- Entire screen
+hl.bind(main_mod .. " + SHIFT + PRINT", function() screenshot.capture("window", screenshot_dir) end)  -- Specific window
+hl.bind(main_mod .. " + ALT + PRINT", function() screenshot.capture("region", screenshot_dir) end)  -- Boxed region
 
 -- Moving focus along windows
 
