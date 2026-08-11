@@ -8,6 +8,7 @@ main_mod = "SUPER"
 require(config_dir .. ".audio_controls")
 local zoom = require(config_dir .. ".addons.zoom")
 local screenshot = require(config_dir .. ".addons.screenshot")
+local scratchpad = require(config_dir .. ".addons.scratchpad")
 
 -- Some general keybindings
 
@@ -23,6 +24,11 @@ hl.bind(main_mod .. " + SEMICOLON", hl.dsp.exec_cmd("wpctl set-mute @DEFAULT_AUD
 -- Switch between windows
 
 hl.bind(main_mod .. " + TAB", hl.dsp.focus({ last = true }))  -- Switch to last focused window
+
+-- Show and minimize windows
+
+hl.bind(main_mod .. " + 0", hl.dsp.workspace.toggle_special())  -- Show global scratchpad
+hl.bind(main_mod .. " + SHIFT + 0", function() scratchpad.global_scratchpad("minimize") end)  -- Move to and from global
 
 -- Fullscreen toggles
 
