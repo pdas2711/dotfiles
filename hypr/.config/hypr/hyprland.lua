@@ -3,7 +3,7 @@
 
 -- Configuration Directory
 
-config_dir = "configs_lua"
+config_dir = "configs"
 
 -- Setting Applications
 
