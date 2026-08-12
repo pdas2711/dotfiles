@@ -12,8 +12,7 @@ lockscreen = "hyprlock"
 
 -- Directories
 
-home = "/home/pdas2711"
-screenshot_dir = home .. "/media/pictures/screenshots"
+screenshot_dir = os.getenv("HOME") .. "/media/pictures/screenshots"
 
 -- Import configs
 
