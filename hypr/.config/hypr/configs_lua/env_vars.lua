@@ -1,4 +1,5 @@
--- Environment Variables
+---- Environment Variables
+
 
 -- Hyprcursor
 hl.env("HYPRCURSOR_THEME", "catppuccin_mocha_sapphire_cursors")

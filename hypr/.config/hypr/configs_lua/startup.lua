@@ -1,4 +1,5 @@
--- Start up applications on Hyprland
+--- Start up applications on Hyprland
+
 
 hl.on("hyprland.start", function()
 	hl.exec_cmd("pkill hyprpaper; hyprpaper")

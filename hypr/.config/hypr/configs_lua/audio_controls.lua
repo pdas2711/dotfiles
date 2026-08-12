@@ -1,5 +1,6 @@
 ---- Basic audio controls
 
+
 -- Using the volume knob
 
 hl.bind("XF86AudioRaiseVolume", hl.dsp.exec_cmd("wpctl set-volume -l 1 @DEFAULT_AUDIO_SINK@ 5%+"), { locked = true, repeating = true })  -- Increase volume by 5%
