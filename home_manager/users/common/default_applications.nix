@@ -8,6 +8,15 @@
 				"text/html" = "brave.desktop";
 				"x-scheme-handler/http" = "brave.desktop";
 				"x-scheme-handler/https" = "brave.desktop";
+				"image/png" = "imv.desktop";
+				"image/jpeg" = "imv.desktop";
+				"image/gif" = "imv.desktop";
+				"image/webp" = "imv.desktop";
+				"audio/flac" = "mpv.desktop";
+				"video/mkv" = "mpv.desktop";
+				"video/mp4" = "mpv.desktop";
+				"application/pdf" = "zathura.desktop";
+				"application/x-xopp" = "xournalpp.desktop";
 			};
 		};
 		desktopEntries = {
