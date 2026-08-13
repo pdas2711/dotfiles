@@ -17,16 +17,24 @@ function norun() {
 function gitf() {
 	if [[ "${1}" == "--remove" ]] && [[ ! -z "${2}" ]]; then
 		filename="${2}"
-		filerepo="$(pwd | sed 's/\//%/g')%${filename}"
-		rm -rf "${XDG_DATA_HOME}/gitf/${filerepo}"
+		if [[ -d ".${filename}.git" ]]; then
+			filerepo=".${filename}.git"
+		else
+			filerepo="${XDG_DATA_HOME}/gitf/$(pwd | sed 's/\//%/g')%${filename}"
+		fi
+		rm -rf "${filerepo}"
 		echo "Removed '${filerepo}' for file '${filename}'."
 	else
 		filename="${1}"
-		filerepo="$(pwd | sed 's/\//%/g')%${filename}"
 		shift
-		git --git-dir="${XDG_DATA_HOME}/gitf/${filerepo}" --work-tree=. "$@"
-		if [[ "${1}" == "init" ]]; then
-			echo -e "*\n!${filename}" > "${XDG_DATA_HOME}/gitf/${filerepo}/info/exclude"
+		if [[ -d ".${filename}.git" ]]; then
+			filerepo=".${filename}.git"
+		else
+			filerepo="${XDG_DATA_HOME}/gitf/$(pwd | sed 's/\//%/g')%${filename}"
+		fi
+		git --git-dir="${filerepo}" --work-tree=. "$@"
+		if [[ "${1}" == "init" && ( -z "${2}" || "${2}" == ".") ]]; then
+			echo -e "*\n!${filename}" > "${filerepo}/info/exclude"
 		fi
 	fi
 }
