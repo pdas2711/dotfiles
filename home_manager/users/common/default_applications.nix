@@ -20,6 +20,7 @@
 					"image/png"
 					"image/jpeg"
 					"image/gif"
+					"image/webp"
 				];
 			};
 			mpv = {
@@ -46,6 +47,13 @@
 				exec = "brave %U";
 				terminal = false;
 				mimeType = [ "text/html" ];
+			};
+			xournalpp = {
+				name = "Xournal++";
+				genericName = "Note Taking Application";
+				exec = "xournalpp %f";
+				terminal = false;
+				mimeType = [ "application/x-xopp" ];
 			};
 		};
 	};
