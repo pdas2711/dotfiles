@@ -27,13 +27,13 @@ function gitf() {
 	else
 		filename="${1}"
 		shift
-		if [[ -d ".${filename}.git" ]]; then
+		if [[ -d ".${filename}.git" || ( "${1}" == "init" && "${2}" == "." ) ]]; then
 			filerepo=".${filename}.git"
 		else
 			filerepo="${XDG_DATA_HOME}/gitf/$(pwd | sed 's/\//%/g')%${filename}"
 		fi
 		git --git-dir="${filerepo}" --work-tree=. "$@"
-		if [[ "${1}" == "init" && ( -z "${2}" || "${2}" == ".") ]]; then
+		if [[ "${1}" == "init" ]]; then
 			echo -e "*\n!${filename}" > "${filerepo}/info/exclude"
 		fi
 	fi
