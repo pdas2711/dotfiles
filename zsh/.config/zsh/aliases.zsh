@@ -1,5 +1,4 @@
-# alias tmux='HISTFILE=$HISTFILE ~/scripts/tmux.sh'
-#alias cdt='cd "$(tmux send-keys -t main "pwd" ENTER; tmux capture-pane -t main -p -S - | sed "/^$/d" | tail -n 2 | head -n 1)"'
+# Aliases
 
 alias dateform='date +%Y%m%d_%H%M%S'
 alias sudo='sudo '
