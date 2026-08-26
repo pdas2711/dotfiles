@@ -5,14 +5,11 @@ alias sudo='sudo '
 alias ls='ls --color=auto -h --group-directories'
 alias ll='ls -l'
 alias ports='sudo lsof -i -P -n | grep "LISTEN"'
-alias rr='ranger --choosedir=$HOME/.rangerdir; LASTDIR=`cat $HOME/.rangerdir`; cd "$LASTDIR"'
-alias qtar='~/.local/bin/quicktar.sh'
 if [[ ! -z "$(command -v trash-cli)" ]]; then
 	alias rm='trash-put'
 fi
 alias cleantex="rm -f *.aux *.log"
 alias rzsh='source ${XDG_CONFIG_HOME}/zsh/.zshrc'
-alias lschmod='stat -c "%a %n"'
 alias less='less -N --line-num-width=5'
 alias rgpg='source ~/.config/zsh/keys_agent.zsh'
 alias nvimr='nvim -R'
