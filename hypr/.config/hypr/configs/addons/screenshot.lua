@@ -3,7 +3,7 @@
 
 local module = {}
 function module.capture(type, destination)
-	filename = os.date("%Y_%m_%d-%H_%M_%S") .. ".png"
+	filename = os.date("%Y%m%d_%H%M%S") .. ".png"
 	if type == "window" then
 		hl.dispatch(hl.dsp.exec_cmd("hyprshot -o " .. destination .. "/ -f " .. filename .. " -m window"))
 	elseif type == "region" then
