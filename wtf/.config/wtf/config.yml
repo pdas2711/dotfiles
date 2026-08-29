@@ -10,6 +10,7 @@ wtf:
   refreshInterval: 1
   mods:
     uptime:
+      title: "Uptime"
       args: []
       cmd: "uptime"
       enabled: true
@@ -20,3 +21,12 @@ wtf:
         width: 2
       refreshInterval: 30
       type: cmdrunner
+    power:
+      enabled: true
+      position:
+        top: 0
+        left: 2
+        height: 1
+        width: 1
+      refreshInterval: 15
+      title: "Power"
