@@ -9,6 +9,17 @@ wtf:
     rows: [10, 10, 10, 4, 4, 90]
   refreshInterval: 1
   mods:
+    ipinfo:
+      colors:
+        name: "lightblue"
+        value: "white"
+      enabled: true
+      position:
+        top: 1
+        left: 2
+        height: 1
+        width: 1
+      refreshInterval: 150
     uptime:
       title: "Uptime"
       args: []
