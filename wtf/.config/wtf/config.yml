@@ -30,6 +30,20 @@ wtf:
         width: 1
       refreshInterval: 15
       title: "Power"
+    digitalclock:
+      enabled: true
+      title: "Date/Time"
+      position:
+        top: 1
+        left: 0
+        height: 2
+        width: 2
+      color: orange
+      font: bigfont
+      withEpoch: true
+      withUTC: true
+      refreshInterval: 1
+      type: "digitalclock"
     ipinfo:
       colors:
         name: "lightblue"
