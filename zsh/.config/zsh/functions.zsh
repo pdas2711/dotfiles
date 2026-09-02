@@ -38,3 +38,13 @@ function gitf() {
 		fi
 	fi
 }
+
+# Updates the GPG agent to point to the correct TTY and uses the ssh kitten if kitty is installed on the client
+function ssh() {
+	command -v gpg-connect-agent &>/dev/null && gpg-connect-agent updatestartuptty /bye 2>/dev/null
+	if [[ "$TERM" == "xterm-kitty" ]] && command -v kitty &>/dev/null; then
+		kitty +kitten ssh "$@"
+	else
+		command ssh "$@"
+	fi
+}
