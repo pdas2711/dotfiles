@@ -48,3 +48,13 @@ function ssh() {
 		command ssh "$@"
 	fi
 }
+
+# Terminal application launcher in a tmux session
+function launch() {
+	if tmux has-session -t "launcher" 2> /dev/null; then
+		tmux send-keys -t "launcher:0.0" "$* &" ENTER
+	else
+		tmux new-session -d -s "launcher"
+		tmux send-keys -t "launcher:0.0" "$* &" ENTER
+	fi
+}
