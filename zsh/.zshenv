@@ -28,9 +28,6 @@ export BASE16_TMUX_OPTION_ACTIVE=1
 export GPG_TTY=$(tty)
 export EDITOR="nvim"
 export HYPRSHOT_DIR="${HOME}/media/pictures/screenshots/"
-if [[ ! -z $(getent passwd git) ]]; then
-	export GIT_REMOTE=~git/"users/${USER}"
-fi
 export PAGER=less LESS='-FR'
 export MANPAGER='nvim +Man!'
 export WORDCHARS=""
