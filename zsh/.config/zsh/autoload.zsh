@@ -1,7 +1,4 @@
-autoload edit-command-line; zle -N edit-command-line
-autoload -U compinit promptinit
-compinit
-promptinit
+# Startup tasks for the shell prompt
 
 echo
 uname -a

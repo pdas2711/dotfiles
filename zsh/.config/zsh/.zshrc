@@ -1,21 +1,33 @@
-# Lines configured by zsh-newuser-install
+# Function completion lookups
+fpath=(~/.config/zsh/completions $fpath)
+fpath=(${(uo)fpath})
+
+# Vim-style keybindings
+autoload edit-command-line; zle -N edit-command-line
+autoload -Uz compinit promptinit
+
+# History file
 HISTFILE=~/.config/zsh/history
 HISTSIZE=1000
 SAVEHIST=1000
+
+# Globbing
 setopt autocd extendedglob nomatch notify
 unsetopt beep
 bindkey -v
-# End of lines configured by zsh-newuser-install
+
 # The following lines were added by compinstall
 zstyle :compinstall filename '$ZDOTDIR/.zshrc'
 
+# Colors and menu interactive
 autoload -U colors && colors
-autoload -Uz compinit
 zstyle ':completion:*' menu select
 zmodload zsh/complist
-compinit
 _comp_options+=(globdots)  # Include hidden files
-# End of lines added by compinstall
+
+# Start compinit and promptinit
+compinit -C
+promptinit
 
 # Source custom files
 for f ($ZDOTDIR/*.zsh) . $f
