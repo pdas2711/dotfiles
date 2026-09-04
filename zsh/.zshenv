@@ -1,13 +1,14 @@
 # Environment Variables
 
-# ZSH environment variables
-skip_global_compinit=1  # Skip global compinit call since it will be called later on
-
 # Basic XDG file paths
 export XDG_DATA_HOME=${XDG_DATA_HOME:="$HOME/.local/share"}
 export XDG_CACHE_HOME=${XDG_CACHE_HOME:="$HOME/.cache"}
 export XDG_CONFIG_HOME=${XDG_CONFIG_HOME:="$HOME/.config"}
 export XDG_STATE_HOME=${XDG_STATE_HOME:="$HOME/.local/state"}
+
+# ZSH-sepcific environment variables
+skip_global_compinit=1  # Skip global compinit call since it will be called later on
+export ZSH_COMPDUMP="${XDG_CACHE_HOME}/zcompdump"
 
 # Additional application file paths
 export CARGO_HOME="${XDG_DATA_HOME}/cargo"
