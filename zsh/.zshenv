@@ -14,7 +14,7 @@ export CARGO_HOME="${XDG_DATA_HOME}/cargo"
 export GNUPGHOME="${XDG_DATA_HOME}/gnupg"
 export GOPATH="${XDG_DATA_HOME}/go"
 export _JAVA_OPTIONS=-Djava.utils.prefs.userRoot="${XDG_CONFIG_HOME}/java"
-export GDBHISTFILE="${XDG_CONFIG_HOME}/gdb/history"
+export GDBHISTFILE="${XDG_STATE_HOME}/gdb/history"
 export PARALLEL_HOME="${XDG_DATA_HOME}/parallel"
 export WGETRC="${XDG_CONFIG_HOME}/wgetrc"
 export PYTHONPYCACHEPREFIX="${XDG_CACHE_HOME}/python"
@@ -36,7 +36,6 @@ export MANPAGER='nvim +Man!'
 export WORDCHARS=""
 export SDL_VIDEODRIVER="wayland"
 export GTK_THEME="Catppuccin-Mocha-Standard-Lavender-dark:dark"
-export EDITOR=nvim
 export PATH=${PATH}:/var/lib/flatpak/exports/bin
 export FZF_DEFAULT_OPTS="--preview 'cat {}'"
 
