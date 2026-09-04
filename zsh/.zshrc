@@ -33,4 +33,4 @@ promptinit
 for f ("${XDG_CONFIG_HOME}"/zsh/*.zsh) . $f
 
 # Theme
-source "${XDG_CONFIG_HOME}"/catppuccin_mocha-zsh-syntax-highlighting.zsh.config
+source "${XDG_CONFIG_HOME}"/zsh/catppuccin_mocha-zsh-syntax-highlighting.zsh.config
