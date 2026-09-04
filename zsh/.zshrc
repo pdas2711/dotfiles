@@ -2,6 +2,11 @@
 fpath=(~/.config/zsh/completions $fpath)
 fpath=(${(uo)fpath})
 
+# History variables
+export HISTFILE="${XDG_STATE_HOME}/zsh_history"
+export HISTSIZE=1000
+export SAVEHIST=1000
+
 # Vim-style keybindings
 autoload edit-command-line; zle -N edit-command-line
 autoload -Uz compinit promptinit
