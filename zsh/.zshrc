@@ -26,7 +26,7 @@ zmodload zsh/complist
 _comp_options+=(globdots)  # Include hidden files
 
 # Start compinit and promptinit
-compinit -C
+compinit -d "${ZSH_COMPDUMP}" -C
 promptinit
 
 # Source custom files
