@@ -12,15 +12,16 @@ if [[ ! -z "$(command -v loginctl)" ]]; then
 fi
 
 # Dynamic Tmux Main Session
-if [[ -z "$TMUX" ]] && (( $+commands[tmux] )); then
+if [[ -z "$TMUX" ]] && (( $+commands[tmux] )); then  # Only run this when not in a tmux session, else do nothing
 	session_target="main"
 	if tmux has-session -t "${session_target}" 2>/dev/null; then
 		local -a session_info
-		session_info=(${(f)$(tmux list-sessions -F '#{session_name} #{session_attached}' 2>/dev/null)})
+		session_info=(${(f)"$(tmux list-sessions -F '#{session_name} #{session_attached}' 2> /dev/null)"})  # All sessions and their statuses in an array
 		local is_attached=0
-		for line in ${session_info}; do
-			local name=${${line}:0:${#session_target}}
-			local session_status=${line##* }
+		for line in "${session_info[@]}"; do
+			local -a line_elm=(${=line})  # A session and its status as elements in an array
+			local name=${line_elm[1]}
+			local session_status=${line_elm[2]}
 			if [[ "${name}" == "${session_target}" ]]; then
 				is_attached=${session_status}
 				break
