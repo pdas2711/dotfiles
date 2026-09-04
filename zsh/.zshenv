@@ -10,6 +10,8 @@ export XDG_STATE_HOME=${XDG_STATE_HOME:="$HOME/.local/state"}
 skip_global_compinit=1  # Skip global compinit call since it will be called later on
 export ZSH_COMPDUMP="${XDG_CACHE_HOME}/zcompdump"
 export HISTFILE="${XDG_STATE_HOME}/zsh_history"
+export HISTSIZE=1000
+export SAVEHIST=1000
 
 # Additional application file paths
 export CARGO_HOME="${XDG_DATA_HOME}/cargo"

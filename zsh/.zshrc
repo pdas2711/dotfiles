@@ -6,11 +6,6 @@ fpath=(${(uo)fpath})
 autoload edit-command-line; zle -N edit-command-line
 autoload -Uz compinit promptinit
 
-# History file
-HISTFILE=~/.config/zsh/history
-HISTSIZE=1000
-SAVEHIST=1000
-
 # Globbing
 setopt autocd extendedglob nomatch notify
 unsetopt beep
