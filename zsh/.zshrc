@@ -30,7 +30,7 @@ compinit -C
 promptinit
 
 # Source custom files
-for f ($ZDOTDIR/*.zsh) . $f
+for f ("${XDG_CONFIG_HOME}"/zsh/*.zsh) . $f
 
 # Theme
-source "$ZDOTDIR"/catppuccin_mocha-zsh-syntax-highlighting.zsh.config
+source "${XDG_CONFIG_HOME}"/catppuccin_mocha-zsh-syntax-highlighting.zsh.config
