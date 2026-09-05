@@ -5,12 +5,8 @@
     "spacing": 4, // Gaps between modules (4px)
     "modules-left": ["hyprland/workspaces", "hyprland/mode", "hyprland/scratchpad", "custom/media"],
     "modules-center": ["hyprland/window"],
-    "modules-right": ["custom/sunset", "pulseaudio", "idle_inhibitor", "clock", "tray"],
+    "modules-right": ["pulseaudio", "idle_inhibitor", "clock", "tray"],
     // Modules configuration
-    "custom/sunset": {
-    	"format": "",
-	"on-click": "exec $XDG_CONFIG_HOME/hypr/scripts/wlsunset.sh"
-	},
      "hyprland/workspaces": {
          "disable-scroll": true,
          "all-outputs": true,
