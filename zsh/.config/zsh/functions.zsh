@@ -58,3 +58,12 @@ function launch() {
 		tmux send-keys -t "launcher:0.0" "$* &" ENTER
 	fi
 }
+
+function statusbar() {
+	if ! tmux has-session -t statusbar 2> /dev/null; then
+		tmux new-session -d -s statusbar
+	fi
+	tmux set -t statusbar status-right '#[fg=green]Vol: #(wpctl get-volume @DEFAULT_AUDIO_SINK@ | awk "{printf \"%.0f%%\", \$2*100}")'
+	tmux set -t statusbar status-interval 1
+	tmux send-keys -t statusbar 'peaclock --config-dir $XDG_CONFIG_HOME/peaclock' ENTER
+}
