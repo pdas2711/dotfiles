@@ -98,7 +98,7 @@ layout {
 }
 
 // Autostart
-spawn-at-startup "waybar"
+spawn-sh-at-startup "swaybg -o '*' -i ~/.wallpaper -m fit"
 
 // To run a shell command (with variables, pipes, etc.), use spawn-sh-at-startup:
 // spawn-sh-at-startup "qs -c ~/source/qs/MyAwesomeShell"
