@@ -184,8 +184,10 @@ binds {
 	Mod+Alt+K     { move-window-up-or-to-workspace-up; }
 	
 	// Move windows into columns
-	Mod+BracketLeft		{ consume-or-expel-window-left; }
-	Mod+BracketRight	{ consume-or-expel-window-right; }
+	Mod+Alt+Left		{ consume-or-expel-window-left; }
+	Mod+Alt+Right		{ consume-or-expel-window-right; }
+	Mod+Alt+H		{ consume-or-expel-window-left; }
+	Mod+Alt+L		{ consume-or-expel-window-right; }
 
 	// Jump window across a workspace
 	Mod+Shift+Home { move-column-to-first; }
