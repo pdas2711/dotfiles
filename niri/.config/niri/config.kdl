@@ -126,10 +126,10 @@ binds {
 	Ctrl+Alt+Delete { quit; }
 
 	// Audio
-	Mod+Equal		{ spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.05+ -l 1.0"; }
-	Mod+Minus		{ spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.05-"; }
-	Mod+Shift+M		{ spawn-sh "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"; }
-	Mod+M			{ spawn-sh "wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle"; }
+	Mod+Equal hotkey-overlay-title="Increase Volume" { spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.05+ -l 1.0"; }
+	Mod+Minus hotkey-overlay-title="Decrease Volume" { spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.05-"; }
+	Mod+Shift+M hotkey-overlay-title="Mute Volume" { spawn-sh "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"; }
+	Mod+M hotkey-overlay-title="Mute Mic" { spawn-sh "wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle"; }
 	XF86AudioRaiseVolume	{ spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.05+ -l 1.0"; }
 	XF86AudioLowerVolume	{ spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.05-"; }
 	XF86AudioMute		{ spawn-sh "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"; }
