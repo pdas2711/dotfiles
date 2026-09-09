@@ -100,9 +100,6 @@ layout {
 // Autostart
 spawn-sh-at-startup "swaybg -o '*' -i ~/.wallpaper -m fit"
 
-// To run a shell command (with variables, pipes, etc.), use spawn-sh-at-startup:
-// spawn-sh-at-startup "qs -c ~/source/qs/MyAwesomeShell"
-
 hotkey-overlay {
 	skip-at-startup
 }
@@ -121,8 +118,8 @@ binds {
 
 	// Important keybinds
 	Mod+Return hotkey-overlay-title="Open a Terminal: kitty" { spawn "kitty"; }
-	Super+Semicolon hotkey-overlay-title="Lock the Screen: hyprlock" { spawn-sh "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle; hyprlock"; }
-	Super+Shift+Semicolon hotkey-overlay-title="Lock the Screen with Audio: hyprlock" { spawn "hyprlock"; }
+	Super+Semicolon hotkey-overlay-title="Lock the Screen" { spawn-sh "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle; swaylock"; }
+	Super+Shift+Semicolon hotkey-overlay-title="Lock the Screen with Audio Playing" { spawn "swaylock"; }
 	Mod+O repeat=false { toggle-overview; }
 	Mod+D repeat=false { close-window; }
 	Mod+Shift+Q { quit; }
