@@ -1,0 +1,36 @@
+# Swaylock Config
+
+color=1e1e1e
+image=~/.screenlock
+indicator-radius=85
+indicator-thickness=10
+show-failed-attempts
+ignore-empty-password
+
+# Indicator default
+key-hl-color=7b00ff
+bs-hl-color=7b00ff
+ring-color=1c1d1d
+inside-color=000000c0
+text-color=e5a445
+
+# Indicator when cleared
+ring-clear-color=00ffff
+inside-clear-color=000000c0
+text-clear-color=e5a445
+
+# Indicator when verifying
+ring-ver-color=00ff56
+inside-ver-color=000000c0
+text-ver-color=e5a445
+
+# Indicator when wrong
+ring-wrong-color=00ff56
+inside-wrong-color=701d1dc0
+text-wrong-color=e5a445
+
+# Indicator when caps locked
+indicator-caps-lock
+ring-caps-lock-color=981d1d
+inside-caps-lock-color=000000c0
+text-caps-lock-color=e5a445
