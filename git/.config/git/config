@@ -1,7 +1,7 @@
 [user]
 	name = Pial Das
 	email = pdas2711@proton.me
-	signingkey = 65425686F98EB901
+	signingkey = F93095149B566ED9EEFC7A6065425686F98EB901!
 [commit]
 	gpgsign = true
 [init]
