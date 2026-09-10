@@ -72,3 +72,24 @@ function statusbar() {
 	fi
 	tmux send-keys -t "statusbar:0.0" 'peaclock --config-dir $XDG_CONFIG_HOME/peaclock' ENTER
 }
+
+function padrename() {
+	local max_num=0
+	for file in "$@"; do
+		local num="${file%.*}"
+		(( num > max_num )) && max_num=${num}
+	done
+	local width=${#max_num}
+	count_renamed=0
+	for file in "$@"; do
+		local num="${file%.*}"
+		local ext=".${file##*.}"
+		local newfile="$(printf "%0${width}d" "${num}")${ext}"
+		if [[ "${file}" != "${newfile}" ]]; then
+			mv -n "${file}" "${newfile}"
+			echo "Renamed '${file}' -> '${newfile}'"
+			count_renamed=$((count_renamed + 1))
+		fi
+	done
+	echo "\nRenamed ${count_renamed} files with ${width} padding."
+}
