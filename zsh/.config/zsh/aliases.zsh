@@ -23,4 +23,4 @@ alias bluelight='wlsunset -t 1400 -T 1500'
 alias hwin='hyprctl clients'
 alias randpw='pwgen -cys 22 | awk "{print $1}"'
 alias xotp='gopass otp -o otp/xansaware/pdas2711'
-alias rswaybg="pkill swaybg; swaybg -o '*' -i ~/.wallpaper -m fit"
+alias rswaybg="pkill swaybg; swaybg -o '*' -i ~/.wallpaper -m fit & disown"
