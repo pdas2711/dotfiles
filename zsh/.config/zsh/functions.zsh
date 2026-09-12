@@ -60,17 +60,10 @@ function launch() {
 }
 
 function statusbar() {
-	if ! tmux has-session -t statusbar 2> /dev/null; then
-		tmux new-session -d -s statusbar
-	fi
 	if [[ ! -z "${WAYLAND_DISPLAY}"  && -z "$(pgrep pavucontrol)" ]]; then
+		launch pavucontrol
 	fi
-	tmux set -t statusbar status-right '#[fg=green]Vol: #(wpctl get-volume @DEFAULT_AUDIO_SINK@ | awk "{printf \"%.0f%%\", \$2*100}")'
-	tmux set -t statusbar status-interval 1
-	if [[ ! -z "${WAYLAND_DISPLAY}"  && -z "$(pgrep pavucontrol)" ]]; then
-		tmux send-keys -t "statusbar:0.0" 'pavucontrol &' ENTER
-	fi
-	tmux send-keys -t "statusbar:0.0" 'peaclock --config-dir $XDG_CONFIG_HOME/peaclock' ENTER
+	peaclock --config-dir $XDG_CONFIG_HOME/peaclock
 }
 
 function padrename() {
