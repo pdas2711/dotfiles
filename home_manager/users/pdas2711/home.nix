@@ -2,6 +2,7 @@
 	imports = [
 		../common/misc.nix
 		../common/default_applications.nix
+		../common/desktop.nix
 	];
 
 	# User Information and State Version
