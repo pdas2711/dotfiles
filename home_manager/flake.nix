@@ -6,12 +6,17 @@
 			url = "github:nix-community/home-manager";
 			inputs.nixpkgs.follows = "nixpkgs";
 		};
+		catppuccin.url = "github:catppuccin/nix";
+
 	};
 
-	outputs = { nixpkgs, home-manager, ... }: {
+	outputs = { nixpkgs, home-manager, ... }@inputs: {
 		homeConfigurations."pdas2711" = home-manager.lib.homeManagerConfiguration rec {
 			pkgs = nixpkgs.legacyPackages."x86_64-linux";
-			modules = [ ./users/pdas2711/home.nix ];
+			modules = [
+				inputs.catppuccin.homeModules.catppuccin
+				./users/pdas2711/home.nix
+			];
 		};
 	};
 }
