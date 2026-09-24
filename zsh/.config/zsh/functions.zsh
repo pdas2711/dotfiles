@@ -25,8 +25,12 @@ function gitf() {
 		rm -rf "${filerepo}"
 		echo "Removed '${filerepo}' for file '${filename}'."
 	else
-		filename="${1}"
-		shift
+		if [[ ! -z "${GITF_FILE}" ]]; then
+			filename="${GITF_FILE}"
+		else
+			filename="${1}"
+			shift
+		fi
 		if [[ -d ".${filename}.git" || ( "${1}" == "init" && "${2}" == "." ) ]]; then
 			filerepo=".${filename}.git"
 		else
