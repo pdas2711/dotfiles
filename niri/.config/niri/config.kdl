@@ -31,7 +31,7 @@ input {
 // Cursor Theme
 cursor {
 	xcursor-theme "catppuccin-mocha-blue-cursors"
-	xcursor-size 24
+	xcursor-size 32
 }
 
 // Monitors

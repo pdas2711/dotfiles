@@ -10,7 +10,7 @@
 		enable = true;
 		name = "catppuccin-mocha-blue-cursors";
 		package = pkgs.catppuccin-cursors.mochaBlue;
-		size = 24;
+		size = 32;
 		gtk.enable = true;
 	};
 
