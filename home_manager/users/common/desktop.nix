@@ -5,6 +5,15 @@
 		autoEnable = true;
 	};
 
+	# Cursor Theming
+	home.pointerCursor = {
+		enable = true;
+		name = "catppuccin-mocha-blue-cursors";
+		package = pkgs.catppuccin-cursors.mochaBlue;
+		size = 24;
+		gtk.enable = true;
+	};
+
 	# Notification daemon
 	services.mako = {
 		enable = true;
